@@ -5,9 +5,10 @@ class CustomNavigatorbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentIndex = 0;
     // se reuqiere mas de un BottomNavigationBarItem de manera obligatoria
     return BottomNavigationBar(
-      currentIndex: 0,
+      currentIndex: currentIndex,
       elevation: 0,
       items: const [
         BottomNavigationBarItem(

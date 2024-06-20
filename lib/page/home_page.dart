@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qr_reader2/page/pages.dart';
+
 import 'package:qr_reader2/widget/widgets.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,13 +20,28 @@ class HomePage extends StatelessWidget {
               ))
         ],
       ),
-      body: const Center(
-        child: Text('Home tage'),
-      ),
+      body: _HomePageBody(),
       bottomNavigationBar: const CustomNavigatorbar(),
       floatingActionButton: const ScanButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
     // floatingActionButton:
+  }
+}
+
+class _HomePageBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // cambiar para mostrar la pagina
+    final currentIdex = 1;
+
+    switch (currentIdex) {
+      case 0:
+        return MapasPage();
+      case 1:
+        return DireccionesPage();
+      default:
+        return MapasPage();
+    }
   }
 }
